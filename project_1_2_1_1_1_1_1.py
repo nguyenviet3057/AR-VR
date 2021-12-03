@@ -229,8 +229,8 @@ while True:
         accept = 0
 
     #Move mouse if not mouse control function
-    if displayMenu not in [21,22]:
-        pag.moveTo(int((cPosX[4]+cPosX[8])/2),int((cPosY[4]+cPosY[8])/2))
+    # if displayMenu not in [21,22,111,121]:
+    #     pag.moveTo(int((cPosX[4]+cPosX[8])/2),int((cPosY[4]+cPosY[8])/2))
 
     '''
         #Select Selections
@@ -308,7 +308,10 @@ while True:
     '''
         #-Control mouse
     '''
-    if displayMenu in [21,22] and closeHand == 0:
+    if displayMenu in [111,121] and closeHand == 1:
+        print("Closed hand while playing music")
+    if displayMenu in [21,22,111,121] and closeHand == 0:
+        displayMenu = 21
         if abs(pPosX[4]-pPosX[8])<60 and abs(pPosY[4]-pPosY[8])<60:
             # print("MOVED")
             cMouX, cMouY = pag.position()
