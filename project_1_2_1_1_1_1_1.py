@@ -6,7 +6,6 @@ import pyautogui as pag
 import os
 import wave
 import pyaudio
-import os
 import speech_recognition as sr
 from mutagen.mp3 import MP3
 from threading import Thread
